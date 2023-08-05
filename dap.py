@@ -12,7 +12,7 @@ st.subheader('Data Analytics Project')
 
 st.cache_data()
 def load_dataset():
-    df=pd.read_csv("work/cleaned_gpg.csv", usecols=['year','region','relate','sex','race','marst','occ','ind','classwkr',
+    df=pd.read_csv("major_project\cleaned_gpg_v2.csv", usecols=['year','region','relate','sex','race','marst','occ','ind','classwkr',
                                                     'hrswork','incwage','annhrs','hrwage','inflate','expendbase10','perconexp',
                                                     'potexp','potexp2','o_occ1990','o_occ1950','o_ind1950','o_ind1990'] )
     df.set_index('year',inplace=True)
