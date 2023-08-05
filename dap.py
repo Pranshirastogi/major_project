@@ -12,7 +12,7 @@ st.subheader('Data Analytics Project')
 
 st.cache_data()
 def load_dataset():
-    df=pd.read_csv("work/cleaned_gpg.csv", usecols=['year','region','relate','sex','race','marst','occ','ind','classwkr',
+    df=pd.read_csv("cleaned_gpg_v2.csv", usecols=['year','region','relate','sex','race','marst','occ','ind','classwkr',
                                                     'hrswork','incwage','annhrs','hrwage','inflate','expendbase10','perconexp',
                                                     'potexp','potexp2','o_occ1990','o_occ1950','o_ind1950','o_ind1990'] )
     df.set_index('year',inplace=True)
@@ -79,4 +79,3 @@ fig13 = px.violin(df,x='annhrs',y='hrwage',title=f'HOURLY WAGE VS NO.OF HOURS WO
 if st.checkbox('Show comparison between income wage and hours wage'):
     st.plotly_chart(fig12, use_container_width=True)
     st.plotly_chart(fig13, use_container_width=True)
-
