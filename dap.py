@@ -79,4 +79,3 @@ fig13 = px.violin(df,x='annhrs',y='hrwage',title=f'HOURLY WAGE VS NO.OF HOURS WO
 if st.checkbox('Show comparison between income wage and hours wage'):
     st.plotly_chart(fig12, use_container_width=True)
     st.plotly_chart(fig13, use_container_width=True)
-
