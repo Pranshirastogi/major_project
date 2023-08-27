@@ -117,7 +117,8 @@ if st.sidebar.checkbox('Show personal consumption expenditure'):
 fig12 = px.area(x=df.index, y=df['incwage'], title=f'INCOME WAGE')
 if st.sidebar.checkbox('Show income wage'):
     st.plotly_chart(fig12, use_container_width=True)
-    st.write('')
+    st.write('''ANALYSIS -
+             X axis denotes the years and Y axis denotes the income wage. Which conclude that the wages are increasing with the years and are higher in 2010.''')
 
 fig13 = px.scatter( x=df.index, y=df['occ'], title=f'OCCUPATION')
 
@@ -127,12 +128,15 @@ fig15= px.box(x=df.index, y=df['hrswork'], title=f'HOURS WORKED')
 
 if st.sidebar.checkbox('Show occupation'):
     st.plotly_chart(fig13, use_container_width=True)
-    st.write('')
+    st.write('''ANALYSIS -
+             X axis denotes years and y axis denotes the occupation. We can see that the occupation increased from 2007 onwards. ''')
 
 if st.sidebar.checkbox('Show industry'):
     st.plotly_chart(fig14, use_container_width=True)
-    st.write('')
+    st.write('''ANALYSIS -
+             We can see that the number of industries increased from 2007 onwards.  ''')
 
 if st.sidebar.checkbox('Show hours worked'):
     st.plotly_chart(fig15, use_container_width=True)
-    st.write('')
+    st.write('''ANALYSIS -
+             We can see that in average hours worked are 40 hours.''')
